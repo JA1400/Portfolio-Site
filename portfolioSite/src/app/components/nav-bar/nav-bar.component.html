@@ -1,0 +1,29 @@
+<nav>
+  <section>
+    <h4 id="logo-text">Jose Federico</h4>
+    <div class="main-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+    <button
+      (click)="toggleMenu()"
+      [ngClass]="{ 'open-menu': menuToggle }"
+      id="menu-btn"
+    >
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+  </section>
+  <aside
+    class="mobile-links"
+    [ngClass]="{ closed: !menuToggle, open: !menuToggle }"
+  >
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </aside>
+</nav>
