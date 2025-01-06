@@ -1,7 +1,17 @@
 nav {
-  padding: 1rem;
+  box-sizing: border-box;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
   background-color: #ffffff;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
   section {
+    padding: 0 1rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,19 +77,21 @@ nav {
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    position: absolute;
+    position: fixed;
+    z-index: 4;
     left: 0;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.2rem;
+    gap: 1.5rem;
     padding: 4rem 1rem 1rem 1rem;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: 400ms;
     a {
+      font-size: 1.5rem;
       text-decoration: none;
       color: black;
     }
@@ -92,9 +104,16 @@ nav {
   }
 }
 
+@media (min-width: 540px) {
+  nav section {
+    padding: 0 2rem;
+  }
+}
+
 @media (min-width: 768px) {
   nav {
     section {
+      padding: 0 3rem;
       h4 {
         margin-right: auto;
       }

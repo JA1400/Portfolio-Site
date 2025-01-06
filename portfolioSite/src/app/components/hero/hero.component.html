@@ -1,0 +1,34 @@
+<header class="hero-section">
+  <div class="hero-content">
+    <div class="img-container">
+      <img
+        src="../../../assets/images/Basic_Ui__186_-removebg-preview.png"
+        alt=""
+      />
+    </div>
+    <div class="text-container">
+      <div class="headline-text">
+        <h1>Hello, I Am <span id="name-text">Jose.</span></h1>
+        <h2
+          [ngClass]="{
+            'slide-in': !isSlidingOut,
+            'slide-out': isSlidingOut
+          }"
+        >
+          {{ currentWord }}
+        </h2>
+      </div>
+
+      <p>
+        A recent graduate with a strong foundation in both front-end and
+        back-end development, as well as a passion for crafting elegant and
+        user-friendly digital experiences.
+      </p>
+      <section class="link-icons">
+        <i class="fa-brands fa-github fa-3x"></i>
+        <i class="fa-brands fa-linkedin fa-3x"></i>
+      </section>
+      <button>View Resume</button>
+    </div>
+  </div>
+</header>
