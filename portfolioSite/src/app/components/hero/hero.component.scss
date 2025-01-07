@@ -4,13 +4,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(68, 204, 238);
+  background: rgb(20, 108, 148);
   background: linear-gradient(
-    230deg,
-    rgba(68, 204, 238, 1) 2%,
-    rgba(120, 228, 249, 1) 19%,
-    rgba(178, 247, 239, 1) 42%,
-    rgba(239, 247, 246, 1) 86%,
+    180deg,
+    rgba(20, 108, 148, 1) 2%,
+    rgba(25, 167, 206, 1) 30%,
+    rgba(175, 211, 226, 1) 63%,
+    rgba(246, 241, 241, 1) 86%,
     rgba(255, 255, 255, 1) 100%
   );
   padding: 1rem 1rem;
@@ -53,6 +53,7 @@ header {
         }
         h2 {
           width: fit-content;
+          color: #115d81;
         }
 
         h2::after {
@@ -71,40 +72,11 @@ header {
             opacity: 0;
           }
         }
-
-        /* 
-        .slide-in {
-          animation: slideIn 500ms forwards;
-        }
-
-        .slide-out {
-          animation: slideOut 500ms forwards;
-        }
-
-        @keyframes slideIn {
-          0% {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideOut {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-        } */
       }
       p {
         margin: 0;
         font-size: 1rem;
+        line-height: 1.5rem;
       }
       .link-icons {
         display: flex;
@@ -119,7 +91,8 @@ header {
         height: 55px;
         border-radius: 10px;
         border: none;
-        background-color: #44ccee;
+        color: white;
+        background-color: #146c94;
         box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
       }
     }
