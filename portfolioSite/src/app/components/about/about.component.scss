@@ -1,25 +1,8 @@
+@use "../../../styles.scss" as *;
+
 #about-me {
-  padding: 5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .about-me-content {
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    h3 {
-      margin: 0;
-      font-size: 3rem;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.7rem;
-      word-spacing: 0.5rem;
-      color: #4c566a;
-    }
-
+  @include content-styles;
+  .section-content {
     .skills-container {
       width: 100%;
       height: auto;
@@ -36,6 +19,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
         img {
           width: 4rem;
         }

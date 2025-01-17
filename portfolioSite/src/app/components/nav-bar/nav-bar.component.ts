@@ -13,6 +13,5 @@ export class NavBarComponent {
 
   toggleMenu(): void {
     this.menuToggle = !this.menuToggle;
-    console.log('Click');
   }
 }

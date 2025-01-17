@@ -52,7 +52,7 @@ export class InViewDirective implements AfterViewInit {
           observer.unobserve(entry.target); // Stop observing once the animation is applied
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
+      { threshold: 0.15 } // Trigger when 10% of the element is visible
     );
 
     // Start observing the element

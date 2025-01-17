@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InViewDirective } from '../../in-view.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, InViewDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
