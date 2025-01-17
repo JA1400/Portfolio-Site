@@ -1,0 +1,37 @@
+<section id="projects-container">
+  <div class="section-content">
+    <h3>Projects</h3>
+    <p appInView="slide-in">
+      A collection of projects that highlight my journey from front-end design
+      to full-stack development.
+    </p>
+    @for (bool of projectsArr; track bool; let i = $index) {
+
+    <article [ngClass]="{ expanded: projectsArr[i] }" appInView="glide-in">
+      <div class="p-img"></div>
+      <div class="p-desc">
+        <div class="p-desc-content">
+          <h5>Hair Salon EJS</h5>
+          <div class="tech-container">
+            <div class="tech-item">NodeJS</div>
+            <div class="tech-item">EJS</div>
+            <div class="tech-item">Mongo</div>
+            <div class="tech-item">Figma</div>
+          </div>
+          <p class="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nisi
+            architecto impedit voluptates! Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit.
+          </p>
+          <button (click)="toggleText(i)">
+            <i
+              [ngClass]="{ 'rotate-icon': projectsArr[i] }"
+              class="fa-solid fa-angle-up fa-xl"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </article>
+    }
+  </div>
+</section>
