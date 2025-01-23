@@ -5,9 +5,8 @@
       A collection of projects that highlight my journey from front-end design
       to full-stack development.
     </p>
-    @for (bool of projectsArr; track bool; let i = $index) {
 
-    <article [ngClass]="{ expanded: projectsArr[i] }" appInView="glide-in">
+    <article [ngClass]="{ 'show-text': projectsArr[0] }" appInView="glide-in">
       <div class="p-img"></div>
       <div class="p-desc">
         <div class="p-desc-content">
@@ -23,15 +22,15 @@
             architecto impedit voluptates! Lorem, ipsum dolor sit amet
             consectetur adipisicing elit.
           </p>
-          <button (click)="toggleText(i)">
+          <button (click)="toggleText(0)">
             <i
-              [ngClass]="{ 'rotate-icon': projectsArr[i] }"
+              [ngClass]="{ 'rotate-icon': projectsArr[0] }"
               class="fa-solid fa-angle-up fa-xl"
             ></i>
           </button>
         </div>
       </div>
     </article>
-    }
+    
   </div>
 </section>

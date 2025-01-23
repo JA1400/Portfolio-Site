@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
   projectsArr: boolean[] = [false, false, false];
+  testArr: number[] = [0, 1, 2];
   constructor() {}
 
   @HostListener('window:resize', ['$event'])

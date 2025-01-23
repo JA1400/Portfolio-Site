@@ -4,7 +4,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CommonModule } from '@angular/common';
-
+import { ContactComponent } from './components/contact/contact.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
     HeroComponent,
     AboutComponent,
     ProjectsComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
