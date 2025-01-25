@@ -19,20 +19,21 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
-    max-width: 60rem;
+    max-width: 80rem;
 
     .img-container {
       height: 15rem;
       display: flex;
       justify-content: center;
-
       img {
         width: 15rem;
       }
     }
 
     .text-container {
+      box-sizing: border-box;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -45,7 +46,7 @@ header {
           position: relative;
           font-size: 2rem;
           margin: 0;
-          font-weight: 500;
+          font-weight: 700;
           #name-text {
             font-family: "Pacifico", serif;
             font-weight: bold;
@@ -58,12 +59,11 @@ header {
 
         h2::after {
           position: absolute;
-          content: " ";
+          content: "|";
           height: 2rem;
-          width: 5px;
+          font-weight: 100;
           left: 100%;
-          top: 0;
-          background-color: black;
+          background-color: #115d81;
           animation: blink 1s step-start 0s infinite;
         }
 
@@ -80,15 +80,15 @@ header {
       }
       .link-icons {
         display: flex;
-        gap: 0.5rem;
+        gap: 1rem;
 
         i:nth-of-type(2) {
           color: #0077b5;
         }
       }
       button {
-        width: 190px;
-        height: 55px;
+        width: 12rem;
+        height: 4rem;
         border-radius: 10px;
         border: none;
         color: white;
@@ -100,34 +100,101 @@ header {
 }
 
 @media (min-width: 540px) {
-  header .hero-content {
+  header {
     padding: 1rem 2rem;
+    .hero-content {
+      .text-container {
+        .headline-text {
+          min-height: 5.5rem;
+          h1,
+          h2 {
+            font-size: 2.25rem;
+          }
+
+          h2::after {
+            height: 2.25rem;
+          }
+        }
+
+        p {
+          font-size: 1.125rem;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
-  header .hero-content {
+  header {
     padding: 1rem 3rem;
-    flex-direction: row-reverse;
-    .img-container {
-      height: 20rem;
-      img {
-        width: 20rem;
-      }
-    }
+    .hero-content {
+      .img-container {
+        height: 18em;
 
-    .text-container {
-      justify-content: center;
+        img {
+          width: 18rem;
+        }
+      }
+      .text-container {
+        justify-content: center;
+        gap: 1.5rem;
+        .headline-text {
+          min-height: 6rem;
+          h1,
+          h2 {
+            font-size: 2.5rem;
+          }
+        }
+      }
     }
   }
 }
 
 @media (min-width: 900px) {
-  header .hero-content {
-    .img-container {
-      height: 25rem;
-      img {
-        width: 25rem;
+  header {
+    .hero-content {
+      flex-direction: row-reverse;
+      gap: 1.5rem;
+      .img-container {
+        height: 20rem;
+        img {
+          width: 20rem;
+        }
+      }
+
+      .text-container {
+        gap: 2rem;
+        .headline-text {
+          min-height: 7rem;
+          h1,
+          h2 {
+            font-size: 2.75rem;
+            font-weight: 800;
+          }
+
+          h2::after {
+            height: 3rem;
+          }
+        }
+
+        button {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  header {
+    .hero-content {
+      flex-direction: row-reverse;
+
+      .img-container {
+        height: 28rem;
+        img {
+          width: 28rem;
+        }
       }
     }
   }
