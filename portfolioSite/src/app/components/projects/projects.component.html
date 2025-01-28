@@ -7,7 +7,7 @@
     </p>
 
     <article [ngClass]="{ 'show-text': projectsArr[0] }" appInView="glide-in">
-      <div class="p-img"></div>
+      <div class="p-img p-img-1"></div>
       <div class="p-desc">
         <div class="p-desc-content">
           <h5>Hair Salon EJS</h5>
@@ -18,9 +18,10 @@
             <div class="tech-item">Figma</div>
           </div>
           <p class="p-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nisi
-            architecto impedit voluptates! Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit.
+            A full-stack web application powered by a Node.js back end and an
+            EJS front end. It features a MongoDB database and uses session-based
+            cookies for secure login to the admin panel, which allows for
+            managing the site's content.
           </p>
           <button (click)="toggleText(0)">
             <i
@@ -31,6 +32,80 @@
         </div>
       </div>
     </article>
-    
+    <article [ngClass]="{ 'show-text': projectsArr[1] }" appInView="glide-in">
+      <div class="p-img p-img-2"></div>
+      <div class="p-desc">
+        <div class="p-desc-content">
+          <h5>Hair Salon SPA</h5>
+          <div class="tech-container">
+            <div class="tech-item">NodeJS</div>
+            <div class="tech-item">Angular</div>
+            <div class="tech-item">Mongo</div>
+            <div class="tech-item">TypeScript</div>
+          </div>
+          <p class="p-text">
+            Rebuilt version of the Hair Salon web app using Angular 16. This SPA
+            features JWT-based authentication, replacing the previously used
+            session-based cookies, and utilizes JSON-based API calls with its
+            Node.js back end.
+          </p>
+          <button (click)="toggleText(1)">
+            <i
+              [ngClass]="{ 'rotate-icon': projectsArr[1] }"
+              class="fa-solid fa-angle-up fa-xl"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article [ngClass]="{ 'show-text': projectsArr[2] }" appInView="glide-in">
+      <div class="p-img p-img-3"></div>
+      <div class="p-desc">
+        <div class="p-desc-content">
+          <h5>Modern Café Site</h5>
+          <div class="tech-container">
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">HTML</div>
+            <div class="tech-item">CSS</div>
+          </div>
+          <p class="p-text">
+            A modern and elegantly designed café website built with HTML, CSS,
+            and JavaScript, showcasing a responsive layout and user-friendly
+            interface.
+          </p>
+          <button (click)="toggleText(2)">
+            <i
+              [ngClass]="{ 'rotate-icon': projectsArr[2] }"
+              class="fa-solid fa-angle-up fa-xl"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article [ngClass]="{ 'show-text': projectsArr[3] }" appInView="glide-in">
+      <div class="p-img p-img-4"></div>
+      <div class="p-desc">
+        <div class="p-desc-content">
+          <h5>Casino Slots Game</h5>
+          <div class="tech-container">
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">HTML</div>
+            <div class="tech-item">CSS</div>
+          </div>
+          <p class="p-text">
+            A browser-based casino slots game built with HTML, CSS, and
+            JavaScript. Features include smooth slot animations, interactive
+            buttons, background music, and sound effects for an immersive gaming
+            experience.
+          </p>
+          <button (click)="toggleText(3)">
+            <i
+              [ngClass]="{ 'rotate-icon': projectsArr[3] }"
+              class="fa-solid fa-angle-up fa-xl"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </article>
   </div>
 </section>

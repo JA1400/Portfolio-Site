@@ -49,4 +49,11 @@
 }
 
 @media (min-width: 900px) {
+  #about-me {
+    .section-content {
+      .skills-container {
+        gap: 4rem;
+      }
+    }
+  }
 }
