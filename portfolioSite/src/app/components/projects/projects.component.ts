@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { InViewDirective } from '../../in-view.directive';
 import { CommonModule } from '@angular/common';
 
@@ -11,23 +11,10 @@ import { CommonModule } from '@angular/common';
   animations: [],
 })
 export class ProjectsComponent {
-  projectsArr: boolean[] = [false, false, false, false];
-  testArr: number[] = [0, 1, 2];
   constructor() {}
+  slides: boolean[] = [false, false, false, false];
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    const containsTrue = this.projectsArr.includes(true);
-    if (!containsTrue) {
-      return;
-    }
-    const width = event.target ? event.target.innerWidth : event; // Handle direct calls or events
-    if (width >= 768) {
-      this.projectsArr.fill(false);
-    }
-  }
-
-  toggleText(index: number): void {
-    this.projectsArr[index] = !this.projectsArr[index];
+  toggleLink(index: number): void {
+    this.slides[index] = !this.slides[index];
   }
 }

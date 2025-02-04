@@ -8,6 +8,7 @@ $text-size-adjust: 100%;
 html {
   line-height: $line-height; // 1
   -webkit-text-size-adjust: $text-size-adjust; // 2
+  scroll-behavior: smooth;
 }
 
 // Sections

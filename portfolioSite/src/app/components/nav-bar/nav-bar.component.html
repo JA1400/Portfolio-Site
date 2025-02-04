@@ -2,10 +2,14 @@
   <section>
     <h4 id="logo-text">Jose Federico</h4>
     <div class="main-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#home" [class.active]="activeSection === 'home'">Home</a>
+      <a href="#about" [class.active]="activeSection === 'about'">About</a>
+      <a href="#projects" [class.active]="activeSection === 'projects'"
+        >Projects</a
+      >
+      <a href="#contact" [class.active]="activeSection === 'contact'"
+        >Contact</a
+      >
     </div>
     <button
       (click)="toggleMenu()"
@@ -21,9 +25,29 @@
     class="mobile-links"
     [ngClass]="{ closed: !menuToggle, open: !menuToggle }"
   >
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+    <a
+      href="#home"
+      [class.active]="activeSection === 'home'"
+      (click)="toggleMenu()"
+      >Home</a
+    >
+    <a
+      href="#about"
+      [class.active]="activeSection === 'about'"
+      (click)="toggleMenu()"
+      >About</a
+    >
+    <a
+      href="#projects"
+      [class.active]="activeSection === 'projects'"
+      (click)="toggleMenu()"
+      >Projects</a
+    >
+    <a
+      href="#contact"
+      [class.active]="activeSection === 'contact'"
+      (click)="toggleMenu()"
+      >Contact</a
+    >
   </aside>
 </nav>

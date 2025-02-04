@@ -1,6 +1,6 @@
 @use "../../../styles.scss" as *;
 
-#contact-container {
+#contact-section {
   @include content-styles;
 
   .section-content {
@@ -94,13 +94,13 @@
 }
 
 @media (min-width: 540px) {
-  #contact-container {
+  #contact-section {
     padding: 5rem 2rem;
   }
 }
 
 @media (min-width: 768px) {
-  #contact-container {
+  #contact-section {
     padding: 5rem 3rem;
     .section-content {
       #form-and-links {

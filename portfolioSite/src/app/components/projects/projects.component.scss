@@ -1,6 +1,6 @@
 @use "../../../styles.scss" as *;
 
-#projects-container {
+#projects-section {
   @include content-styles;
   background-color: #f6f1f1;
 
@@ -13,19 +13,96 @@
       flex-direction: column;
       gap: 0;
       background-color: white;
-      transition: all 200ms ease-in-out;
-      max-height: 25rem;
       .p-img {
+        position: relative;
         z-index: 1;
         border-radius: 15px 15px 0px 0px;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 190%;
         width: 100%;
-        height: 17rem;
-        transition: height 200ms ease-in-out;
+        height: 16rem;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: top;
+          height: 100%;
+          width: 100%;
+          transform-origin: top;
+          transition: 250ms;
+          transform: scale(1.4);
+        }
+
+        .cafe-img {
+          object-position: left;
+          transform-origin: left;
+          transform: scale(1);
+        }
+
+        .slots-img {
+          object-position: center;
+          transform-origin: center;
+          transform: scale(1);
+        }
+
+        .project-links {
+          transition: 200ms;
+          opacity: 0;
+          box-sizing: border-box;
+          border-radius: 15px 15px 0px 0px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.688) 7%,
+            rgba(246, 241, 241, 0) 90%
+          );
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 1rem;
+          gap: 0.8rem;
+          font-size: 0.8rem;
+          a {
+            transition: 150ms;
+            transform: scale(0);
+            text-decoration: none;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 15px;
+            background-color: #000000bb;
+          }
+
+          a:hover {
+            transform: scale(1.2);
+          }
+        }
       }
 
+      .p-img-active {
+        img {
+          transform: scale(1.5) !important;
+        }
+        .project-links {
+          opacity: 1;
+          a {
+            transform: scale(1);
+          }
+        }
+
+        .cafe-img {
+          transform: scale(1.1) !important;
+        }
+
+        .slots-img {
+          transform: scale(1.1) !important;
+        }
+      }
       .p-img-1 {
         background-image: url("../../../assets/images/salon1.png");
       }
@@ -37,31 +114,28 @@
       .p-img-3 {
         background-image: url("../../../assets/images/cafe.png");
         background-position: top left;
-        background-size: cover !important;
       }
 
       .p-img-4 {
         background-image: url("../../../assets/images/slots.png");
-        background-size: cover !important;
+        background-position: center;
       }
 
       .p-desc {
         position: relative;
         box-sizing: border-box;
         z-index: 2;
-        padding: 1rem 1rem 0 1rem;
+        padding: 1rem;
         border-radius: 0 0 10px 10px;
         overflow-y: hidden;
-        height: 8rem;
-        transition: height 200ms ease-in-out;
         .p-desc-content {
-          height: 100%;
           overflow-y: hidden;
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 1rem;
           .tech-container {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
             .tech-item {
               color: #4c566a;
@@ -79,43 +153,6 @@
           .p-text {
             line-height: normal;
             word-spacing: normal;
-            opacity: 0;
-            transition: opacity 200ms ease-in-out;
-          }
-
-          button {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            box-sizing: border-box;
-            padding: 0.9rem 0;
-            background: white;
-            border-radius: 0px 0px 10px 10px;
-            border: none;
-            transition: 150ms;
-            width: 100%;
-            i {
-              transition: all 200ms ease;
-            }
-          }
-
-          .rotate-icon {
-            transform: rotate(180deg);
-          }
-        }
-      }
-    }
-
-    .show-text {
-      .p-img {
-        height: 10rem;
-      }
-
-      .p-desc {
-        height: 15rem;
-        .p-desc-content {
-          .p-text {
-            opacity: 1;
           }
         }
       }
@@ -124,45 +161,38 @@
 }
 
 @media (min-width: 540px) {
-  #projects-container {
+  #projects-section {
     padding: 5rem 2rem;
-    .section-content {
-      article {
-        .p-img {
-          background-size: 140%;
-        }
-      }
-    }
   }
 }
 
 @media (min-width: 768px) {
-  #projects-container {
+  #projects-section {
     padding: 5rem 3rem;
     .section-content {
       article {
         flex-direction: row;
         .p-img {
-          height: 20rem;
-          border-radius: 10px 0 0 10px;
-          background-size: cover;
+          height: 21rem;
+          border-radius: 15px 0 0 15px;
+          img {
+            transform: scale(1.2);
+          }
+
+          .project-links {
+            border-radius: 15px 0 0 15px;
+          }
+        }
+
+        .p-img-active {
+          img {
+            transform: scale(1.3) !important;
+          }
         }
 
         .p-desc {
-          height: 20rem;
+          height: 21rem;
           width: 35rem;
-          .p-desc-content {
-            .tech-container {
-              flex-wrap: wrap;
-            }
-            .p-text {
-              opacity: 1;
-            }
-
-            button {
-              display: none;
-            }
-          }
         }
       }
     }
@@ -170,15 +200,19 @@
 }
 
 @media (min-width: 900px) {
-  #projects-container {
+  #projects-section {
     .section-content {
       article {
         .p-img {
-          background-size: 140%;
+          img {
+            transform: scale(1.4);
+          }
         }
 
-        .p-img-3 {
-          background-position: center left;
+        .p-img-active {
+          img {
+            transform: scale(1.5) !important;
+          }
         }
       }
     }

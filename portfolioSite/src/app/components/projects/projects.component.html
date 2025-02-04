@@ -1,4 +1,4 @@
-<section id="projects-container">
+<section id="projects-section">
   <div class="section-content">
     <h3>Projects</h3>
     <p appInView="slide-in">
@@ -6,8 +6,22 @@
       to full-stack development.
     </p>
 
-    <article [ngClass]="{ 'show-text': projectsArr[0] }" appInView="glide-in">
-      <div class="p-img p-img-1"></div>
+    <article appInView="glide-in">
+      <div
+        class="p-img"
+        [ngClass]="{ 'p-img-active': slides[0] }"
+        (click)="toggleLink(0)"
+      >
+        <img src="../../../assets/images/salon1.png" alt="salon-img" />
+        <div class="project-links">
+          <a href="https://github.com/JA1400/HairSalon"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+          ></a>
+        </div>
+      </div>
       <div class="p-desc">
         <div class="p-desc-content">
           <h5>Hair Salon EJS</h5>
@@ -23,17 +37,25 @@
             cookies for secure login to the admin panel, which allows for
             managing the site's content.
           </p>
-          <button (click)="toggleText(0)">
-            <i
-              [ngClass]="{ 'rotate-icon': projectsArr[0] }"
-              class="fa-solid fa-angle-up fa-xl"
-            ></i>
-          </button>
         </div>
       </div>
     </article>
-    <article [ngClass]="{ 'show-text': projectsArr[1] }" appInView="glide-in">
-      <div class="p-img p-img-2"></div>
+    <article appInView="glide-in">
+      <div
+        class="p-img"
+        [ngClass]="{ 'p-img-active': slides[1] }"
+        (click)="toggleLink(1)"
+      >
+        <img src="../../../assets/images/salon2.png" alt="salon-img" />
+        <div class="project-links">
+          <a href="https://github.com/JA1400/NGHairSalon"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+          ></a>
+        </div>
+      </div>
       <div class="p-desc">
         <div class="p-desc-content">
           <h5>Hair Salon SPA</h5>
@@ -49,17 +71,27 @@
             session-based cookies, and utilizes JSON-based API calls with its
             Node.js back end.
           </p>
-          <button (click)="toggleText(1)">
-            <i
-              [ngClass]="{ 'rotate-icon': projectsArr[1] }"
-              class="fa-solid fa-angle-up fa-xl"
-            ></i>
-          </button>
         </div>
       </div>
     </article>
-    <article [ngClass]="{ 'show-text': projectsArr[2] }" appInView="glide-in">
-      <div class="p-img p-img-3"></div>
+    <article appInView="glide-in">
+      <div
+        class="p-img"
+        [ngClass]="{ 'p-img-active': slides[2] }"
+        (click)="toggleLink(2)"
+      >
+        <img
+          src="../../../assets/images/cafe.png"
+          class="cafe-img"
+          alt="salon-img"
+        />
+        <div class="project-links">
+          <a href="#"><i class="fa-brands fa-github fa-2x"></i></a>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+          ></a>
+        </div>
+      </div>
       <div class="p-desc">
         <div class="p-desc-content">
           <h5>Modern Café Site</h5>
@@ -73,17 +105,29 @@
             and JavaScript, showcasing a responsive layout and user-friendly
             interface.
           </p>
-          <button (click)="toggleText(2)">
-            <i
-              [ngClass]="{ 'rotate-icon': projectsArr[2] }"
-              class="fa-solid fa-angle-up fa-xl"
-            ></i>
-          </button>
         </div>
       </div>
     </article>
-    <article [ngClass]="{ 'show-text': projectsArr[3] }" appInView="glide-in">
-      <div class="p-img p-img-4"></div>
+    <article appInView="glide-in">
+      <div
+        class="p-img"
+        [ngClass]="{ 'p-img-active': slides[3] }"
+        (click)="toggleLink(3)"
+      >
+        <img
+          src="../../../assets/images/slots.png"
+          class="slots-img"
+          alt="cafe-img"
+        />
+        <div class="project-links">
+          <a href="https://github.com/JA1400/SlotsGame"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+          ></a>
+        </div>
+      </div>
       <div class="p-desc">
         <div class="p-desc-content">
           <h5>Casino Slots Game</h5>
@@ -98,12 +142,6 @@
             buttons, background music, and sound effects for an immersive gaming
             experience.
           </p>
-          <button (click)="toggleText(3)">
-            <i
-              [ngClass]="{ 'rotate-icon': projectsArr[3] }"
-              class="fa-solid fa-angle-up fa-xl"
-            ></i>
-          </button>
         </div>
       </div>
     </article>
