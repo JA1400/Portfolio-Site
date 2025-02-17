@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "build:prod": "VITE_PUBLIC_KEY=$VITE_PUBLIC_KEY VITE_TEMPLATE_ID=$VITE_TEMPLATE_ID VITE_SERVICE_ID=$VITE_SERVICE_ID ng build --configuration=production",
     "test": "ng test"
   },
   "private": true,
