@@ -49,9 +49,9 @@
                 }
               ],
               "define": {
-                "process.env.EJS_PUBLIC_KEY": "process.env.EJS_PUBLIC_KEY",
-                "process.env.EJS_TEMPLATE_ID": "process.env.EJS_TEMPLATE_ID",
-                "process.env.EJS_SERVICE_ID": "process.env.EJS_SERVICE_ID"
+                "environment.PUBLIC_KEY": "process.env.VITE_PUBLIC_KEY",
+                "environment.TEMPLATE_ID": "process.env.VITE_TEMPLATE_ID",
+                "environment.SERVICE_ID": "process.env.VITE_SERVICE_ID"
               }
             },
             "development": {
