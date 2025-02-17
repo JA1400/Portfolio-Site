@@ -47,7 +47,12 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "define": {
+                "process.env.EJS_PUBLIC_KEY": "process.env.EJS_PUBLIC_KEY",
+                "process.env.EJS_TEMPLATE_ID": "process.env.EJS_TEMPLATE_ID",
+                "process.env.EJS_SERVICE_ID": "process.env.EJS_SERVICE_ID"
+              }
             },
             "development": {
               "optimization": false,

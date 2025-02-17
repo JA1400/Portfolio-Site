@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  PUBLIC_KEY: 'YOUR_PRODUCTION_PUBLIC_KEY', // Your ACTUAL production key!
-  TEMPLATE_ID: 'YOUR_PRODUCTION_TEMPLATE_ID',
-  SERVICE_ID: 'YOUR_PRODUCTION_SERVICE_ID',
+  PUBLIC_KEY: process.env['EJS_PUBLIC_KEY'] || '',
+  TEMPLATE_ID: process.env['EJS_TEMPLATE_ID'] || '',
+  SERVICE_ID: process.env['EJS_SERVICE_ID'] || '',
 };
