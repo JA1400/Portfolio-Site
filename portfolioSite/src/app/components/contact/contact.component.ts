@@ -11,7 +11,7 @@ import emailjs from '@emailjs/browser';
 import { trigger, style, transition, animate } from '@angular/animations';
 import { BannerComponent } from '../banner/banner.component';
 import { BannerService } from '../../services/banner.service';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-contact',
@@ -48,6 +48,7 @@ export class ContactComponent implements OnInit {
   constructor(private fb: FormBuilder, private bService: BannerService) {}
 
   ngOnInit(): void {
+    console.log(environment);
     this.contactForm = this.fb.group({
       from_name: ['', [Validators.required, Validators.minLength(3)]],
       reply_to: ['', [Validators.required, Validators.email]],
