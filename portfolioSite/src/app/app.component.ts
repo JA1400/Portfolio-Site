@@ -6,6 +6,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    BannerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

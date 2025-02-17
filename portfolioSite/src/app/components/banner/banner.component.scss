@@ -1,0 +1,27 @@
+aside {
+  position: fixed;
+  z-index: 4;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #146c94;
+  border-left: 0.6rem solid #146c94;
+  top: 6rem;
+  right: 1rem;
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-weight: 700;
+    padding-bottom: .2rem;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}

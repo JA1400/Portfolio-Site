@@ -6,39 +6,63 @@
       connect.
     </p>
     <div id="form-and-links">
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
         <label for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter your name"
-        />
+        <div>
+          <input
+            type="text"
+            name="name"
+            formControlName="from_name"
+            placeholder="Enter your name"
+            required
+          />
+          <div @fadeSlide *ngIf="shouldShowPopup('from_name')">
+            Please enter a name.
+          </div>
+        </div>
         <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-        />
+        <div>
+          <input
+            type="email"
+            name="email"
+            formControlName="reply_to"
+            placeholder="Enter your email"
+          />
+          <div @fadeSlide *ngIf="shouldShowPopup('reply_to')">
+            Please enter a valid email.
+          </div>
+        </div>
         <label for="message">Message</label>
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Enter your message"
-        ></textarea>
-        <button appInView="grow-in">Send Message</button>
+        <div>
+          <textarea
+            name="message"
+            formControlName="message"
+            placeholder="Enter your message"
+          ></textarea>
+          <div @fadeSlide *ngIf="shouldShowPopup('message')">
+            Please enter a message.
+          </div>
+        </div>
+        <button [disabled]="disabledBtn" appInView="grow-in" type="submit">
+          Send Message
+        </button>
       </form>
       <div id="contact-links">
         <div class="link-group">
           <h4>Email</h4>
-          <a appInView="slide-in" href="#">test&#64;gmail.com</a>
+          <a appInView="slide-in" href="mailto:jose.federico.1400@gmail.com">
+            jose.federico.1400&#64;gmail.com</a
+          >
         </div>
         <div class="link-group">
           <h4>Social</h4>
           <div id="social-links">
-            <i appInView="slide-in" class="fa-brands fa-github fa-3x"></i>
-            <i appInView="slide-in" class="fa-brands fa-linkedin fa-3x"></i>
+            <a href="https://github.com/JA1400">
+              <i appInView="slide-in" class="fa-brands fa-github fa-3x"></i>
+            </a>
+            <a href="#">
+              <i appInView="slide-in" class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
           </div>
         </div>
       </div>
