@@ -40,7 +40,7 @@ export class ContactComponent implements OnInit {
   formData = { from_name: '', reply_to: '', message: '' };
   contactForm!: FormGroup;
   disabledBtn: boolean = false;
-  serviceID = '126VAtvBzcMUK_BsS';
+  serviceID = 'service_29ja6py';
   templateID = 'template_1xmh58k';
   publicKey = '126VAtvBzcMUK_BsS';
 
