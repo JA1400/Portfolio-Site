@@ -41,18 +41,7 @@
                   "maximumError": "6kb"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "define": {
-                "environment.PUBLIC_KEY": "process.env.VITE_PUBLIC_KEY",
-                "environment.TEMPLATE_ID": "process.env.VITE_TEMPLATE_ID",
-                "environment.SERVICE_ID": "process.env.VITE_SERVICE_ID"
-              }
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
