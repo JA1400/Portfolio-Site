@@ -52,4 +52,8 @@ export class HeroComponent implements OnInit {
       }
     }, 50);
   }
+
+  openResume() {
+    window.open('../../../assets/resume/ResumeV5.pdf', '_blank');
+  }
 }
