@@ -29,10 +29,12 @@ import { BannerService } from '../../services/banner.service';
 })
 export class BannerComponent {
   isVisible: boolean = false;
+  message: string = '';
 
   constructor(private bService: BannerService) {
-    this.bService.bannerMessage$.subscribe((bool) => {
-      this.isVisible = bool;
+    this.bService.bannerMessage$.subscribe((state) => {
+      this.message = state.message;
+      this.isVisible = state.isVisible;
     });
   }
 }

@@ -17,9 +17,16 @@
           <a href="https://github.com/JA1400/HairSalon"
             ><i class="fa-brands fa-github fa-2x"></i
           ></a>
-          <a href="https://hairsalon-nhs2.onrender.com"
-            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
-          ></a>
+          <button
+            (click)="openLink($event, 'https://hairsalon-nhs2.onrender.com', 1)"
+            [disabled]="isLoadingEJS"
+          >
+            @if (!isLoadingEJS) {
+            <i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i>
+            } @else {
+            <span class="loader"></span>
+            }
+          </button>
         </div>
       </div>
       <div class="p-desc">
@@ -51,9 +58,16 @@
           <a href="https://github.com/JA1400/NGHairSalon"
             ><i class="fa-brands fa-github fa-2x"></i
           ></a>
-          <a href="https://nghairsalon.onrender.com"
-            ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
-          ></a>
+          <button
+            (click)="openLink($event, 'https://nghairsalon.onrender.com', 0)"
+            [disabled]="isLoadingSPA"
+          >
+            @if (!isLoadingSPA) {
+            <i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i>
+            } @else {
+            <span class="loader"></span>
+            }
+          </button>
         </div>
       </div>
       <div class="p-desc">

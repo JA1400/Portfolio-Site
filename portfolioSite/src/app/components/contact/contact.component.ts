@@ -84,7 +84,7 @@ export class ContactComponent implements OnInit {
         }
       )
       .finally(() => {
-        this.bService.showBanner();
+        this.bService.showBanner('Message sent successfully!');
         this.contactForm.reset();
         this.disabledBtn = false;
       });
