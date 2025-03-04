@@ -1,6 +1,7 @@
 header {
   box-sizing: border-box;
   height: calc(100dvh - 3.5rem);
+  min-height: 45rem;
   display: flex;
   justify-content: center;
   align-items: center;
