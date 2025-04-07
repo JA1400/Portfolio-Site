@@ -54,6 +54,6 @@ export class HeroComponent implements OnInit {
   }
 
   openResume() {
-    window.open('../../../assets/resume/ResumeV6.pdf', '_blank');
+    window.open('../../../assets/resume/Resume.pdf', '_blank');
   }
 }
